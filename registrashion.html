@@ -1,0 +1,39 @@
+<?php
+   include 'validation/checkRegistration.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Регистрация</title>
+   <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+   <h1>Регистрация</h1>
+   <form action="" method="">
+      <div>
+         <label>Логин</label>
+         <input type="text" name="login" placeholder="Введите ваш логин">
+      </div>
+      <div>
+         <label>Пароль</label>
+         <input type="password" name="password" placeholder="Введите ваш пароль">
+         <?php echo $error['password'] ?>
+      </div>
+      <div>
+         <label>Повторите пароль</label>
+         <input type="password" name="confirm_password" value="<?php echo $_POST['name'] ?/>" placeholder="Повторите ваш пароль">
+         <?php echo $error['password'] ?>
+      </div>
+      <div>
+         <label>Email</label>
+         <input type="email" name="email" placeholder="Введите ваш email">
+      </div>
+      <div>
+         <label>Имя</label>
+         <input type="text" name="name" placeholder="Введите ваше имя">
+      </div>
+      <button>Зарегистрироваться</button>
+   </form>
+</body>
+</html>
